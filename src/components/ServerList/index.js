@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ServerList = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
-        fetch("http://localhost:3001/")
-            .then((response) => response.json())
+        axios.get("http://localhost:3001/")
+            .then((response) => response.data)
             .then((data) => setData(data));
     }, []);
 
@@ -19,10 +20,6 @@ const ServerList = () => {
                     <h2>{server.price}</h2>
                     <h2>{server.region}</h2>
                     <h2>{server.date}</h2>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                 </div>
             ))}
         </div>
