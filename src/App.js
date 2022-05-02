@@ -2,13 +2,13 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    useNavigate,
 } from "react-router-dom";
 
 import CreateServer from "./components/CreateServer";
 import ServerList from "./components/ServerList";
 import Dashboard from "./components/Dashboard";
 import HomePage from "./components/HomePage";
+import NavBar from "./components/NavBar";
 
 import "./App.css";
 
@@ -27,14 +27,5 @@ function App() {
         </div>
     );
 }
-
-const NavBar = () => {
-    const navigate = useNavigate();
-    return (
-        <div className="NavBar">
-            <h1 onClick={() => navigate("/")}>Acel Solutions Dashboard</h1>
-        </div>
-    );
-};
 
 export default App;

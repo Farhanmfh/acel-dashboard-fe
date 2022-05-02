@@ -4,18 +4,6 @@
 }
 .App {
     text-align: center;
+   
 }
 
-.NavBar {
-    height: 80px;
-    background-color: #8a2be2;
-}
-
-.NavBar > h1 {
-    color: aliceblue;
-    padding-top: 15px;
-}
-
-.NavBar > h1:hover {
-    cursor: pointer;
-}

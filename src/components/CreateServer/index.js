@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
 
@@ -8,6 +9,8 @@ const CreateServer = () => {
     const [price, setPrice] = useState();
     const [region, setRegion] = useState();
     const [date, setDate] = useState();
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +23,7 @@ const CreateServer = () => {
             })
             .then(function (response) {
                 console.log(response);
-            })
+            }).then(navigate("/serverList"))
             .catch(function (error) {
                 console.log(error);
             });

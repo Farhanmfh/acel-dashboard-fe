@@ -1,0 +1,60 @@
+.title {
+    font-size: 28px;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.dashboard-price {
+    position: absolute;
+    height: 215px;
+    margin-left: 20%;
+    width: 60%;
+    background: #f4f1f1;
+    border-radius: 10px;
+}
+
+.total-price {
+    margin-top: 50px;
+    width: 500px;
+    position: absolute;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 47px;
+    line-height: 57px;
+    color: #000000;
+}
+
+.total-amount-lable {
+    position: absolute;
+    width: 500px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #787272;
+}
+
+.total-server {
+    margin-top: 50px;
+    margin-left: 500px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 47px;
+    line-height: 57px;
+    color: #000000;
+}
+
+.total-server-lable {
+    margin-left: 0px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #787272;
+}

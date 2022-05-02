@@ -1,10 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import "./style.css";
+
 const getTotalPrice = (servers) => {
-    let price = [];
-    servers.forEach((element) => price.push(element.price));
-    return price;
+    return servers.reduce(
+        (acc, val) => {
+            if (val.name) {
+                acc.user += 1;
+            }
+            acc.price += val.price;
+            return acc;
+        },
+        { price: 0, user: 0 }
+    );
 };
 const Dashboard = () => {
     const [servers, setServers] = useState();
@@ -19,12 +28,18 @@ const Dashboard = () => {
 
     return servers ? (
         <div>
-            <h1>Dashboard</h1>
-            <h2>
-               Grand Total = ${getTotalPrice(servers).reduce(
-                    (accumulator, currentValue) => accumulator + currentValue
-                )}
-            </h2>
+            <div className="title">Dashboard</div>
+            <div className="dashboard-price">
+                <div className="total-price">
+                    ${getTotalPrice(servers).price}
+                    {getTotalPrice(servers).user}
+                    <div className="total-amount-lable">Total Amount</div>
+                </div>
+                <div className="total-server">
+                    {getTotalPrice(servers).user}
+                    <div className="total-server-lable">Total Servers</div>
+                </div>
+            </div>
         </div>
     ) : (
         <div>Loading....</div>

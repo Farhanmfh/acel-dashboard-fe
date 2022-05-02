@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #3ec178;
+}
+
+.menu-items {
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    padding-top: 30px;
+    margin-right: 10%;
+}
+
+.add-server {
+    background-color: #c13e87;
+    margin: 20px;
+    padding: 31px;
+    margin-top: -19px;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dashboard {
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.server-list {
+    margin-top: -5px;
+    cursor: pointer;    
+}
+
+.NavBar {
+    height: 80px;
+    margin-left: 10%;
+}
+
+.NavBar > h1 {
+    color: aliceblue;
+    padding-top: 15px;
+}
+
+.NavBar > h1:hover {
+    cursor: pointer;
+}
